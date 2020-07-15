@@ -6,6 +6,21 @@
   <title>一毛八</title>
   <link href="http://hovertree.com/texiao/html5/index/hovertreewelcome.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="./scr/hovertreewelcome.css">
+  <style>
+    .signIn {
+      display: block;
+      width: 180px;
+      margin: 120px auto;
+      color: #f81282;
+      text-shadow: 0px 0px 133px #f81282;
+      font-size: 26px;
+      padding: 7px 0;
+      border: 2px solid #f81282;
+      border-radius: 5px;
+      box-shadow: 0 0 300px #f81282;
+      display: none;
+    }
+  </style>
 </head>
 
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false"
@@ -15,13 +30,12 @@
     <div>
       <h1 id="h1">一毛八</h1>
       <h2 id="h2">想问候，不知从何问起，就直接说喜欢你！</h2>
+      <div id="btn" class="signIn">进入主页</div>
     </div>
   </div>
   <canvas id="canvas"></canvas>
-  <script type="text/javascript" src="./scr/hovertreewelcome.js">
-  </script>
+  <script type="text/javascript" src="./scr/hovertreewelcome.js">  </script>
   <script type="text/javascript">
-
     ; (function (window) {
 
       var ctx,
@@ -380,6 +394,23 @@
     })(window);
 
   </script>
+
+  <script type="text/javascript">
+    document.onkeydown = function (e) {
+      if (e.key == "q") {
+        // $("#btn").css({ 'display': 'block' })
+        document.getElementById("btn").style.display = "block";
+      };
+    };
+    document.getElementById("btn").onclick = () => {
+      window.location.href = "./yimaoba.html";
+    }
+    let myfun = (a = 0, b = 0) => {
+      return a + b;
+    };
+    console.log(myfun(9, 5));
+  </script>
+
 </body>
 
 </html>
